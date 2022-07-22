@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "e9c641b6-e137-43f8-b59a-64e3d95f3526",
+		"name": "energy-consumption",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Save Energy Tariff",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\" : \"hello\",\n    \"timeStart\": \"2022-06-22T18:06:00Z\",\n    \"timeEnd\": \"2023-06-22T18:06:00Z\",\n    \"costPerKwh\": 0.25\n}"
+				},
+				"url": {
+					"raw": "localhost:9000/energy/energy-tariff",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"energy",
+						"energy-tariff"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Charged Session",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"driverId\" : \"raba\",\n    \"chargeSessionStart\": \"2022-06-22T18:06:10Z\",\n    \"chargeSessionEnd\": \"2022-06-22T18:06:15Z\",\n    \"consumedEnergy\": 1000\n}"
+				},
+				"url": {
+					"raw": "localhost:9000/energy/charged-session",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"energy",
+						"charged-session"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Charged Sessions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9000/energy/charged-sessions",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"energy",
+						"charged-sessions"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
